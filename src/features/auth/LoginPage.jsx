@@ -11,7 +11,10 @@ const inputStyle = {
   boxSizing: "border-box",
   fontSize: "15px",
   outline: "none",
-  backgroundColor: "#f8fafc",
+  backgroundColor: "#ffffff",
+  color: "#0f172a",
+  caretColor: "#0f172a",
+  WebkitTextFillColor: "#0f172a",
 };
 
 const labelStyle = {
@@ -68,27 +71,29 @@ const LoginPage = () => {
         <div style={{ marginBottom: "18px" }}>
           <label style={labelStyle}>Email</label>
           <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            style={inputStyle}
-            required
-          />
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  placeholder="Enter your email"
+  style={inputStyle}
+  autoComplete="email"
+  required
+/>
         </div>
 
         <div style={{ marginBottom: "18px" }}>
           <label style={labelStyle}>Password</label>
           <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="Enter your password"
-            style={inputStyle}
-            required
-          />
+  type="password"
+  name="password"
+  value={formData.password}
+  onChange={handleChange}
+  placeholder="Enter your password"
+  style={inputStyle}
+  autoComplete="current-password"
+  required
+/>
         </div>
 
         {errorMessage ? (
